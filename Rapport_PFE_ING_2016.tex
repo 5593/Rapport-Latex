@@ -1,0 +1,68 @@
+%|--------------------------------------
+%|		Config and packages files
+%|--------------------------------------
+
+\include{config/base}
+\include{config/style}
+\include{config/functions}
+\include{config/config}
+
+%|--------------------------------------
+%|Begin document
+%|--------------------------------------
+
+\begin{document}
+
+%|--------------------------------------
+%|		*** Report cover Page ***
+%|--------------------------------------
+
+\includepdf{PDG/pdg.pdf}
+%\include{PDG/pdg}
+
+%|--------------------------------------
+%|Table (matiers, figure, remerciement)
+%|--------------------------------------
+
+\renewcommand{\thepage}{} 
+\include{PDG/dedicace}
+\include{PDG/remerciment} 
+
+%|--------------------------------------
+%| 			Document settings
+%|--------------------------------------
+
+\include{config/settings}
+
+%|--------------------------------------
+%| 			CHAPTERS INCLUDE
+%|--------------------------------------
+
+\include{PDG/intro_generale} 
+\renewcommand{\headrulewidth}{0.4pt}
+
+\include{chapitres/ch1}
+%\include{chapitres/ch2}
+%\include{chapitres/ch3}
+%\include{chapitres/ch4}
+%\include{chapitres/concGen}
+%\include{chapitres/annexes}
+
+%|--------------------------------------
+%| 		BIBLIOGRAPHIE
+%|--------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{urlbib}
+
+
+%|--------------------------------------
+%| 		Include ABSTRACT 
+%|--------------------------------------
+
+%\includepdf{PDG/verso_rapport.pdf}
+
+%|--------------------------------------
+%| 		END DOCUMENT
+%|--------------------------------------
+\end{document}

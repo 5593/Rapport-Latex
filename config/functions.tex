@@ -1,0 +1,72 @@
+
+%|--------------------------------------
+%|			*** Functions ***
+%|--------------------------------------
+
+%|--------------------------------------
+%|Function - build a cover page for 
+%|			the chapter with summary
+%|--------------------------------------
+\newcommand{\chapitre}[1]{
+%\renewcommand{\thepage}{}
+\fancypagestyle{plain}{%redefining plain pagestyle
+\fancyhf %clear all headers and footers fields
+\fancyfoot{}
+\fancyfoot[C]{}
+\fancyfoot[L]{}
+\fancyfoot[R]{\textbf{Page | \thepage \hspace{1mm} sur \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0.0pt}
+}
+\lhead{\footnotesize \chaptertitlename ~ \thechapter ~: #1}
+\chapter{#1}
+\vspace*{10mm}
+\minitoc
+\newpage
+%\renewcommand\thepage{\arabic{page}}
+%\setcounter{page}{\thepage} 
+}
+
+
+
+%|--------------------------------------
+%|Function - build a cover page for 
+%|			the other cantent with summary
+%|--------------------------------------
+\newcommand{\cover}[1]{
+%\renewcommand{\thepage}{}
+\fancypagestyle{plain}{%redefining plain pagestyle
+\fancyhf %clear all headers and footers fields
+\fancyfoot{}
+\fancyfoot[C]{}
+\fancyfoot[L]{}
+\fancyfoot[R]{\textbf{Page | \thepage \hspace{1mm} sur \pageref{LastPage}}}
+\renewcommand{\headrulewidth}{0.0pt}
+}
+\lhead{}
+\addcontentsline{toc}{chapter}{#1}
+\vspace*{\fill}
+\hrule
+\vspace*{0.3cm}
+\begin{center}
+\textbf{\Huge #1}
+\end{center}
+\vspace*{0.3cm}
+\hrule
+\vspace*{\fill}
+
+\newpage
+\lhead{\footnotesize #1}
+%\renewcommand\thepage{\arabic{page}}
+%\setcounter{page}{\thepage} 
+}
+
+%|--------------------------------------
+%|Function - define the style 
+%|			of chapter content
+%|--------------------------------------
+
+\newcommand{\contenue}[1]{
+\begin{spacing}{1.5}
+#1
+\end{spacing}
+}

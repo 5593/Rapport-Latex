@@ -1,0 +1,46 @@
+
+%|--------------------------------------
+%|		Define the chapter style 
+%|				RESET STYLE
+%|--------------------------------------
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{150\p@}%
+  {\parindent \z@ \centering \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \huge\bfseries \@chapapp\space \thechapter
+%        \newline
+        \par\nobreak
+        \vspace*{0.5cm}
+         \hrule
+        \vskip 20\p@
+    \fi
+   % \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    %\vskip 40\p@
+  }}
+\makeatother
+
+%|--------------------------------------
+%|Define the Footrule and headrule style 
+%|				 RESET STYLE
+%|--------------------------------------
+
+\colorlet{Gray}{gray!40}
+\renewcommand{\footrule}{\hbox to\headwidth{%
+  \color{Gray}\leaders\hrule height \footrulewidth\hfill}}
+  
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{Gray}\leaders\hrule height \headrulewidth\hfill}}
+
+%|--------------------------------------
+%|Define the subsubsubsection (paragraph) 
+%|				 RESET STYLE
+%|--------------------------------------
+  
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+

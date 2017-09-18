@@ -1,0 +1,182 @@
+\chapitre{CADRE GÉNÉRAL DU PROJET}
+
+\contenue{
+\addcontentsline{toc}{section}{Introduction}
+\section*{Introduction}
+Nous entamons ce chapitre par une présentation de l'organisme d'accueil, puis nous faisons une étude et critique de l'existant et nous présentons la solution. Ensuite nous expliquons le choix de notre méthodologie de travail suite à une étude comparative entre différentes méthodologies.
+
+\section{Présentation de l'organisme d'accueil}
+
+
+SIG Solutions est une entreprise accise à Montréal (Québec, CANADA), fondée en 2015 et qui offre des solutions à ces clients dans le domaine de géolocalisations et des systèmes d'information géographique.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.16]{images/logoEntreprise.png}
+\caption{Logo SIG SOLUTIONS}
+\end{figure}
+
+SIG Solutions repousse constamment les limites en concevant des technologies géo spatiales novatrices destinées à améliorer les processus d'affaires de ses clients. Reconnue pour l'excellence et la flexibilité de ses solutions, l'entreprise a acquis la confiance d'une vaste clientèle.\\
+
+A partir de l'année 2016, SIG Solutions commence à travailler dans des applications qui se basent sur l'information géographiques et la géolocalisation.
+
+\section{Contexte du projet}
+\subsection{Étude et critique de l'existant}
+
+L'étude de l'existant permet de déterminer les points faibles et les points forts des produits actuels pour pouvoir déterminer les besoins du client.\\
+
+Nous présentons les différentes applications de taxis existantes en Tunisie :\\
+\begin{itemize}
+\item \textbf{Allo taxi} offre toutes solutions de déplacement simples et fiables sur le Grand-Tunis. Elle offre une prestation de qualité et un temps d'attente du taxi minimal, assuré par des chauffeurs personnels, expérimentés et parlant différentes langues.
+\item \textbf{Taxi-Sat} est un système de recherche satellitaire capable de trouver en quelques secondes le taxi le plus proche du client, en calculant le trajet routier réel à effectuer et pas en se basant sur la distance aérienne.
+\item \textbf{Taxi Bibi} représente une plateforme innovante qui  permet de rechercher facilement et rapidement des taxis libres pas loin du client. Bénéficiant de la technologie GPS et des dernières technologies mobiles, Taxi Bibi affiche en temps réel les taxis libres circulant dans la proximité du client. Une liste des noms des chauffeurs, ainsi que leur distance s'affiche, il suffit de choisir l'un d'eux et de l'appeler. Le client peut suivre son trajet en temps réel pendant qu'il viendra le récupérer.
+\item \textbf{Taxi216} permet de visualiser l'ensemble des taxis autour du client sur une carte et commander le plus proche en se basant sur les données de géolocalisation GPS. La mise en relation avec le taxi est gratuite et le chauffeur de Taxi est mené à activer son compteur dès l'acceptation de la course.\\
+\end{itemize}
+
+Cette nouvelle application propose une version dédiée aux professionnels (Les chauffeurs de taxis) et une autre, gratuite, dédiée aux passagers. Grâce à un abonnement mensuel, les professionnels profiteront d'un système de géolocalisation simple et précis leur permettant d'être localisés par des clients en fonction de leurs positions.
+
+\subsubsection{Critiques des applications}
+
+Les services décrits ci-dessus présentent des limites :
+
+\begin{itemize}
+\item Certains d'eux ne possèdent pas d'application mobile.
+\item La réservation se fait par téléphone.
+\item Le compteur est activé dès la réservation du taxi.
+\item Le propriétaire ne peut pas localiser son taxi  
+\item Pour s'inscrire à l'un de ces services, le propriétaire paye pour l'achat et l'installation des matériels qui seront installés dans le taxi.
+\end{itemize}
+
+\subsubsection{Synthèse}
+
+Le tableau ci-dessous synthétise les différentes fonctionnalités des différentes applications de taxi existantes et de notre future application.\\
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|m{5.5cm}|m{1.7cm}|m{1.7cm}|m{1.7cm}|m{1.8cm}|m{1.7cm}|}
+\hline 
+  & \textbf{Allo Taxi}& \textbf{Taxi-Sat} & \textbf{Taxi bibi} & \textbf{Taxi 2016} & \textbf{Taksi} \\ 
+\hline 
+Application mobile Client &  &  & x & x & x \\ 
+\hline 
+Calcul approximatif de la distance du trajet vers la destination &  &  &  &  & x \\ 
+\hline 
+Calcul approximatif de la distance entre le client et le taxi & x & x & x & x & x \\ 
+\hline 
+Calcul approximatif du tarif de la course &  &  &  &  & x \\ 
+\hline 
+Calcul approximatif de la part du client  (partage) &  &  &  &  & x \\ 
+\hline 
+Carte géographique &  &  & x & x & x \\ 
+\hline 
+Paiement par carte bancaire &  &  & x & x & x \\ 
+\hline 
+Réservation par téléphone & x & x &  &  &  \\ 
+\hline 
+Points de fidélité &  &  &  &  & x \\ 
+\hline 
+Historique du trajet parcouru &  &  &  &  & x \\ 
+\hline 
+Calcul du revenu approximatif du taxi &  &  &  &  & x \\ 
+\hline 
+Partage d'un taxi en utilisant l'application mobile &  &  &  &  & x \\ 
+\hline 
+\end{tabular} 
+\caption{Tableau comparatif des services}
+\end{table}
+
+\subsection{Questionnaires}
+Pour mieux dégager les fonctionnalités et déterminer ses priorités, nous avons fait une étude sur 100 chauffeurs et sur 400 clients en leurs posant quelques questions qui vont nous aider à réaliser notre future application.\\
+
+Suite à cette étude, les résultats sont illustrés dans \textbf{l'annexe A}.
+
+\subsection{Solution proposée}
+
+Après une étude approfondie de l'existant, plusieurs limites des applications des taxis  ont été identifiées. Les solutions ne sont pas complètes car elles ne tiennent pas compte de tous les besoins de gestion inhérents à ce type d'application. De ce fait, nous proposons la conception et le développement d'un système de service de transport intelligent qui offre au propriétaire une application web avec laquelle il peut: localiser son taxi en temps réel, gérer ses chauffeurs, consulter son revenu, consulter la distance parcouru ainsi que  les trajets parcourus par son taxi par intervalle de temps. \\
+
+Le système offre aussi une application mobile pour les chauffeurs et pour les clients qui permet de fournir des prix approximatifs des courses, de partager un taxi entre clients, de faciliter le payement et offre  aussi la possibilité de faire une réclamation en cas de problèmes. Les utilisateurs de notre système reçoivent un bonus sur chaque invitation d'amis à rejoindre l'application et à chaque partage de taxi. Ce bonus peut être transformé en cadeaux.
+
+\section{Méthodologie de travail}
+
+Pour passer des besoins du Société et des idées du projet, au code de l'application nous devons adopter une méthodologie de développement que nous allons respecter tout au long du projet afin de modéliser et développer notre application.
+
+\subsection{Étude comparative}
+
+Le tableau suivant est un tableau comparatif qui cite les avantages et les inconvénients pour chacune des méthodes les plus adaptées afin d'aboutir à la méthode la plus adéquate à notre projet. \\
+
+Notre choix sera basé sur des critères fixés selon l'environnement, les contraintes de qualité, et les personnes impliquées sur le projet :
+\begin{itemize}
+\item Des équipes de développeur dans des sites distant.
+\item Coût de développement limité par module.
+\item Couverture de toutes les phases (postérieures et antérieures).
+\item Contraintes de développement.
+\item Qualité.
+\end{itemize}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l|m{7cm}|m{7cm}|}
+\cline{2-3}
+                                     & \begin{center}
+                                     \textbf{Points forts}                                                                                                                      
+                                     \end{center} & \begin{center}
+                                     \textbf{Points faibles}                                                
+                                     \end{center} \\ \hline
+\multicolumn{1}{|l|}{\textbf{RUP}}   & - Itératif                                                                                                                                                                            & \begin{tabular}[c]{@{}l@{}}- Coût de personnalisation élevé.\\ - Peu de place pour le développement.\end{tabular} \\ \hline
+\multicolumn{1}{|l|}{\textbf{XP}}    & \begin{tabular}[c]{@{}l@{}}- Itératif\\ - Large place pour le développement\\ - \textless 10 personnes\end{tabular}                                                                   & - Ignore les étapes postérieurs ainsi que les antérieurs                                                          \\ \hline
+\multicolumn{1}{|l|}{\textbf{SCRUM}} & \begin{tabular}[c]{@{}l@{}}- Itératif\\ - Courtes itérations \\ - Amélioration de la communication \\ - Augmentation de la productivité \\ - \textgreater 10 personnes\end{tabular}   & \begin{tabular}[c]{@{}l@{}}- Infraction de responsabilité \\ - Travaille en équipe non éloigné\end{tabular}       \\ \hline
+\multicolumn{1}{|l|}{\textbf{2TUP}}  & \begin{tabular}[c]{@{}l@{}}- Itératif et Incrémentale \\ - Large place de développement \\ - Spécification de la communication \\ - Adapté par les projets à tous taille\end{tabular} & - Pas de documents types.                                                                                         \\ \hline
+\end{tabular}
+\caption{Avantages et inconvénients des méthodes les plus adaptés.}
+\end{table}
+
+D'après l'extraction des points forts et faibles de chaque méthode, notre choix s'est porté vers la méthode 2TUP car elle répond à nos critères de choix, donc elle nous servira à faire réussir le projet.\cite{methode}
+
+\subsection{Le processus 2TUP}
+Durant ce travail nous avons suivi le processus 2TUP (2 Tracks Unified Process) et ce choix justifier par de la nature de ce processus qui insiste en plus sur le non corrélation entre les aspects fonctionnels et les aspects techniques.\\
+Le processus 2TUP sépare les contraintes fonctionnelles des contraintes techniques, sous la forme de deux branches fonctionnelle et technique.\cite{methode}\\
+\textbf{La branche fonctionnelle} comporte :
+\begin{itemize}
+\item[•] La capture des besoins fonctionnels.
+\item[•] L'analyse fonctionnelle du système à produire, indépendamment de la technologie
+\end{itemize}
+\textbf{La branche architecture technique} inclut :
+\begin{itemize}
+\item[•] La capture des besoins techniques.
+\item[•] La définition de l'architecture technique escomptée
+\end{itemize}
+\textbf{La branche du milieu }: à l'issue des évolutions du modèle fonctionnel et de l'architecture technique, la réalisation du système consiste à fusionner les résultats des 2 branches. Cette fusion conduit à l'obtention d'un processus en forme de Y. Cette branche comporte les étapes suivantes :
+\begin{itemize}
+\item[•] La conception préliminaire.
+\item[•] La conception détaillée.
+\item[•] Le codage.
+\item[•] L'intégration.\\
+\end{itemize}
+
+Le figure ci-dessous décrit le cycle en Y de la méthode 2TUP. 
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{images/2TUP.jpg}
+\caption{Le processus 2TUP}
+\end{figure}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Conclusion}
+\section*{Conclusion}
+Dans ce chapitre nous avons présenté l'organisme d'accueil, l'étude de l'existant et les objectifs de la solution à mettre en œuvre. Nous avons aussi justifié le choix de notre méthodologie de travail. Dans le chapitre suivant nous analysons et spécifions les besoins de notre application.
+
+
+
+
+
+
+
+
+
+}

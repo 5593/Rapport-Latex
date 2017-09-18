@@ -1,0 +1,49 @@
+%|--------------------------------------
+%|	Mini toc (Mini table of cantents) 
+%|			set niveau a 1
+%|--------------------------------------
+
+\dominitoc
+\setcounter{mtc}{1} 
+
+%|--------------------------------------
+%|Table (matiers, figure, remerciement)
+%|--------------------------------------
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%|--------------------------------------
+%| 			Acronymes liste
+%|--------------------------------------
+
+%\include{PDG/acronymes}
+
+%|--------------------------------------
+%| 			Numerotation style
+%|--------------------------------------
+%\onehalfspacing
+%\doublespacing
+
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand \thesection{\arabic{section}}
+\renewcommand \thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand*{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+%|--------------------------------------
+%| 		EDIT Header and footer
+%|--------------------------------------
+
+\newpage
+\setcounter{page}{1}%modifier num page
+\renewcommand\thepage{\arabic{page}}%afficher num page
+\setcounter{page}{\thepage} 
+\rhead{}
+\chead{}
+\lhead{}
+\cfoot{}
+\rfoot{\textbf{Page | \thepage \hspace{1mm} sur \pageref{LastPage}}}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
