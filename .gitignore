@@ -219,5 +219,5 @@ TSWLatexianTemp*
 # expex forward references with \gathertags
 *-tags.tex
 
-.idea/vcs.xml   
+.idea/vcs.xml
 .idea/*.*
